@@ -43,7 +43,7 @@ billing_pwa/\
 - The actual database is not committed to GitHub; only the schema is version-controlled.
 - To create and initialize the database:
 
-createdb billing_pwa
+create db billing_pwa\
 psql -U postgres -d billing_pwa -f database/schema.sql
   
 
