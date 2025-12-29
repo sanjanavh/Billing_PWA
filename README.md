@@ -45,6 +45,12 @@ billing_pwa/\
 
 create db billing_pwa\
 psql -U postgres -d billing_pwa -f database/schema.sql
+
+##  Dashboard Data Loading Behavior
+
+- Dashboard metrics (Total Revenue, Pending Invoices, Total Customers, Total Invoices) are **fetched from the backend only upon user interaction**.
+- Currently, the data is triggered and populated **when the user performs a double-click on the dashboard page**.
+- This behavior was intentionally kept during development to control API calls and clearly demonstrate backend connectivity during testing.
   
 
 
