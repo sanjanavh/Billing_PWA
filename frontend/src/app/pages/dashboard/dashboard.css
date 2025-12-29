@@ -1,0 +1,57 @@
+/* PAGE */
+.dashboard-page {
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER STRIP (same as Customers) */
+.dashboard-header {
+  background: #f3f7f9;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.dashboard-header-inner {
+  padding: 24px 32px;
+}
+
+.dashboard-header h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+  color: #111827;
+}
+
+/* CONTENT AREA */
+.dashboard-content {
+  padding: 24px 32px;
+}
+
+/* CARD GRID */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+/* CARD */
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* CARD TEXT */
+.card p {
+  margin: 0 0 12px;
+  font-size: 14px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 600;
+  color: #111827;
+}

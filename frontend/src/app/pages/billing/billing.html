@@ -1,0 +1,81 @@
+<div class="billing-page">
+
+  <!-- HEADER -->
+  <div class="billing-header">
+    <div class="billing-header-inner">
+
+      <h2>Account Settlements</h2>
+
+      <div class="billing-actions">
+        <input
+          type="text"
+          placeholder="Search"
+          (input)="onSearch($event)"
+        />
+
+        <select>
+          <option>January</option>
+          <option>February</option>
+          <option selected>March</option>
+          <option>April</option>
+          <option>May</option>
+          <option>June</option>
+          <option>July</option>
+          <option>August</option>
+          <option>September</option>
+          <option>October</option>
+          <option>November</option>
+          <option>December</option>
+    
+
+        </select>
+
+        <button class="primary">GO</button>
+
+        <button class="icon-btn" (click)="onDownload()">
+          <img src="assets/icons/download.png" />
+        </button>
+
+        <button class="icon-btn" (click)="onExport()">
+          <img src="assets/icons/export.png" />
+        </button>
+      </div>
+    </div>
+
+    <!-- TABS -->
+    <div class="billing-tabs">
+      <span
+        [class.active]="activeTab === 'invoices'"
+        (click)="switchTab('invoices')">
+        Invoices
+      </span>
+
+      <span
+        [class.active]="activeTab === 'settlements'"
+        (click)="switchTab('settlements')">
+        Recent Settlements
+      </span>
+
+      <span
+        [class.active]="activeTab === 'ledger'"
+        (click)="switchTab('ledger')">
+        Ledger
+      </span>
+    </div>
+  </div>
+
+  <!-- GRID -->
+  <div class="ag-theme-quartz billing-grid">
+    <ag-grid-angular
+  class="ag-theme-quartz"
+  theme="legacy"
+  [rowData]="rowData"
+  [columnDefs]="colDefs"
+  [defaultColDef]="defaultColDef"
+  (gridReady)="onGridReady($event)"
+  style="width: 100%; height: 520px;">
+</ag-grid-angular>
+
+  </div>
+
+</div>

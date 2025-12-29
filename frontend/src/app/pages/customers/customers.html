@@ -1,0 +1,51 @@
+<div class="page-header">
+  <h2 class="page-title">Customers</h2>
+
+  <div class="page-actions">
+    <input
+      type="text"
+      placeholder="Search"
+      class="search-input"
+      (input)="onSearch($event)"
+    />
+
+    <select class="month-select">
+      <option>January</option>
+      <option>February</option>
+      <option>March</option>
+       
+          <option>April</option>
+          <option>May</option>
+          <option>June</option>
+          <option>July</option>
+          <option>August</option>
+          <option>September</option>
+          <option>October</option>
+          <option>November</option>
+      <option selected>December</option>
+    </select>
+
+    <button class="go-btn">GO</button>
+
+    <button class="icon-btn" (click)="onDownload()">
+      <img src="assets/icons/download.png" />
+    </button>
+
+    <button class="icon-btn" (click)="onExport()">
+      <img src="assets/icons/export.png" />
+    </button>
+  </div>
+</div>
+
+<div class="grid-wrapper ag-theme-quartz">
+  <ag-grid-angular
+  class="ag-theme-quartz"
+  theme="legacy"
+  [rowData]="rowData"
+  [columnDefs]="colDefs"
+  [defaultColDef]="defaultColDef"
+  (gridReady)="onGridReady($event)"
+  style="width: 100%; height: 520px;">
+</ag-grid-angular>
+
+</div>
