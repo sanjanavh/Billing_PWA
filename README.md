@@ -5,9 +5,9 @@
 ##  Project Structure
 
 billing_pwa/
-├── frontend/ → Angular admin dashboard (UI layer)
-├── backend/ → Node.js + Express REST API
-└── database/ → PostgreSQL database schema
+├── frontend/ → Angular admin dashboard (UI layer)\
+├── backend/ → Node.js + Express REST API\
+└── database/ → PostgreSQL database schema\
 
 
 ##  Frontend → Backend Connection
@@ -19,11 +19,11 @@ billing_pwa/
 
 ### API Endpoints Used
 
-/api/dashboard
-/api/customers
-/api/billing/invoices
-/api/billing/settlements
-/api/billing/ledger
+/api/dashboard\
+/api/customers\
+/api/billing/invoices\
+/api/billing/settlements\
+/api/billing/ledger\
 
 
 ##  Backend → Database Connection
